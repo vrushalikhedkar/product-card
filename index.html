@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product card ❤️</title>
+    <style>
+        .prodduct-card-caontainer {
+            width: 300px;
+            border: 1px solid gray;
+            background-color: #FFEAEA;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            margin-top: 200px;
+        }
+
+        body {
+            background-color: #815B5B;
+        }
+
+        .product-card {
+            width: 260px;
+            margin: 10px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 1px 3px chocolate;
+        }
+
+        .headings {
+            text-align: center;
+            margin-top: -3px;
+        }
+
+        .product-btn {
+            display: block;
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin: 10px auto;
+            background-color: #470D21;
+            color: #FFFBEB;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        .product-btn:hover {
+            background-color: #A7727D;
+        }
+
+        .quantity-coantainer {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .quantity-coantainer-btn {
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            color: white;
+            border: none;
+            background-color: #470D21;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prodduct-card-caontainer">
+        <img src="chocoletes.jpg" class="product-card" />
+        <h2 class="headings">Farrero Rocher</h2>
+        <div class="quantity-coantainer">
+            <button class="quantity-coantainer-btn" onclick="decrease()">-</button>
+            <span id="product-quantity">1</span>
+            <button class="quantity-coantainer-btn" onclick="increase()">+</button>
+        </div>
+        <button class="product-btn">Add To Card</button>
+    </div>
+
+    <script type="text/javascript">
+        function decrease() {
+            const qntElement = document.getElementById("product-quantity");
+            const qnt = parseInt(qntElement.innerHTML);
+            qntElement.innerHTML = qnt - 1;
+            if (qnt == 1) {
+                alert("Minimum quantity can be 1")
+            }
+            else {
+                qntElement.innerHTML = qut - 1;
+            }
+        }
+
+        function increase() {
+            const qntElement = document.getElementById("product-quantity");
+            const qnt = parseInt(qntElement.innerHTML);
+            qntElement.innerHTML = qnt + 1;
+            if (qnt == 5) {
+                alert("You can not order more than 5")
+            }
+            else {
+                qntElement.innerHTML = qut - 1;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
